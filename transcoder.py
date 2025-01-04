@@ -1,7 +1,7 @@
+from lxml import etree
 import argparse
-import gzip
 import base64
-from xml.dom.minidom import parseString
+import gzip
 
 def decode_ptpl(file_path, output_path=None, verbose=False):
     if not file_path.endswith(".ptpl"):
@@ -28,7 +28,8 @@ def decode_ptpl(file_path, output_path=None, verbose=False):
     if verbose:
         print("Formatting XML content...")
     try:
-        pretty_xml = parseString(xml_data).toprettyxml(indent="  ")
+        tree = etree.fromstring(xml_data)
+        pretty_xml = etree.tostring(tree, pretty_print=True, encoding='unicode')
     except Exception as e:
         raise RuntimeError(f"Failed to format XML content: {e}")
 
@@ -92,6 +93,9 @@ def main():
     parser.add_argument("--output", "-o", help="Path to save the output file.")
     parser.add_argument("--verbose", "-v", action="store_true", help="Enable verbose output.")
     args = parser.parse_args()
+
+    if args.encode and not args.output:
+        parser.error("The --output argument is required when encoding.")
 
     try:
         if args.decode:
