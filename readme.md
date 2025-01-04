@@ -58,12 +58,6 @@ python transcoder.py -d example.ptpl -o output.xml
 
 ### Encode an XML File
 
-To encode an XML file into `.ptpl` format:
-
-```bash
-python transcoder.py -e example.xml
-```
-
 To encode an XML file and save the `.ptpl` to `output.ptpl`:
 
 ```bash
