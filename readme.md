@@ -32,7 +32,7 @@ Run the `transcoder.py` script with the following syntax:
 python transcoder.py [-d | -e] <file_path> [--output <output_path>] [--verbose]
 ```
 
-Or download pip ptpl-transcoder package from PyPI!
+Or download `ptpl-transcoder` package from PyPI!
 
 ```bash
 pip install ptpl-transcoder
@@ -45,7 +45,7 @@ And replace `python transcoder.py` in commands with `ptpl-transcoder`!
 - `-d`, `--decode`: Decode a `.ptpl` file into XML.
 - `-e`, `--encode`: Encode an XML file into `.ptpl` format.
 - `<file_path>`: The path to the input file. Use a `.ptpl` file for decoding or an XML file for encoding.
-- `--output`, `-o`: (Optional for decoding) Specify the path to save the output file. If not provided, decoded XML content is printed to the console, and encoded data defaults to `<input_name>.ptpl`.
+- `--output`, `-o`: (Optional for decoding) Specify the path to save the output file. If not provided, decoded XML content is printed to the console.
 - `--verbose`, `-v`: (Optional) Enable verbose output for detailed processing information.
 
 ## Examples
