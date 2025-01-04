@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ptpl-transcoder"
+version = "1.0.1"
+description = "A CLI tool to to decode .ptpl files into .xml and encode .xml files back into .ptpl format."
+authors = [
+    { name = "KRW CLASSIC", email = "classic.krw@gmail.com" }
+]
+
+[project.urls]
+Source = "https://github.com/KRWCLASSIC/PTPL-CLI-Transcoder"
+Tracker = "https://github.com/KRWCLASSIC/PTPL-CLI-Transcoder/issues"

@@ -32,6 +32,14 @@ Run the `transcoder.py` script with the following syntax:
 python transcoder.py [-d | -e] <file_path> [--output <output_path>] [--verbose]
 ```
 
+Or download pip ptpl-transcoder package from PyPI!
+
+```bash
+pip install ptpl-transcoder
+```
+
+And replace `python transcoder.py` in commands with `ptpl-transcoder`!
+
 ### Arguments
 
 - `-d`, `--decode`: Decode a `.ptpl` file into XML.
